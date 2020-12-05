@@ -1,0 +1,197 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    color: #000000;
+    font-weight: 300;
+    background-color: #ff99ff;
+}
+
+#content {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+        -ms-flex-align: center;
+            align-items: center;
+}
+
+.note {
+    width: 200px;
+    height: auto;
+    float: left;
+    background-color: yellow;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+    border-radius: 2px;
+    padding: 20px;
+    margin-bottom: 10px;
+}
+
+.note:hover {
+    box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+}
+
+.delete-note {
+    position: absolute;
+    top:5px;
+    right:5px;
+    display: none;
+    color: rgba(0,0,0.6,0.6);
+    cursor: pointer;
+}
+
+.note:hover .delete-note {
+    display: block;
+}
+
+.note-editor {
+    max-width: 600px;
+    padding: 16px;
+    margin: 16px auto;
+    background-color: white;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+    border-radius: 50px;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+
+}
+
+.textarea {
+    width: 250%;
+    resize: none;
+    margin: 5px;
+    font-size: 14px;
+    border: none;
+    font-weight: 300;
+}
+
+.textarea:focus {
+    outline: 0;
+}
+
+.add-button {
+    width: 100px;
+    background-color:#44c767;
+    border-radius:28px;
+    border:1px solid #18ab29;
+    cursor:pointer;
+    color:#ffffff;
+    font-size:14px;
+    padding:8px 8px;
+    text-transform: uppercase;
+    text-decoration:none;
+    text-shadow:0px 1px 0px #2f6627;
+}
+
+.add-button:hover {
+    background-color:#5cbf2a;
+}
+
+.add-button:active {
+    position:relative;
+    top:1px;
+}
+
+.add-button:focus {
+    outline: 0;
+}
+
+.notes-grid {
+    margin: 0 auto;
+    overflow: hidden;
+}
+
+.notes-app {
+    max-width: 830px;
+    width: 100%;
+}
+
+.app-header {
+    text-align: center;
+    font-weight: 500;
+    color: grey;
+    text-shadow: 0px 2px 3px rgba(255,255,255,0.5);
+}
+
+.controls {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+}
+
+.colors-list {
+    overflow: hidden;
+}
+
+.colors-list > div {
+    width: 30px;
+    height: 30px;
+    border-radius: 30px;
+    float: left;
+    margin-right: 10px;
+}
+
+.radio-custom {
+    display: none;
+}
+
+.radio-custom-label {
+    display: inline-block;
+    position: relative;
+    vertical-align: middle;
+    margin-right: 5px;
+    cursor: pointer;
+}
+
+.radio-custom + .radio-custom-label:before {
+    content: '';
+    border-radius: 10px;
+    display: inline-block;
+    vertical-align: middle;
+    width: 16px;
+    height: 16px;
+    padding: 2px;
+    text-align: center;
+}
+
+.radio-custom:checked + .radio-custom-label:after {
+    content: "";
+    padding: 2px;
+    text-align: center;
+    position: absolute;
+    width: 1px;
+    height: 4px;
+    border: solid blue;
+    border-width: 0 2px 2px 0;
+    transform: rotate(45deg);
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    top: 3px;
+    left: 7px;
+}
+
+.noteSearch {
+    max-width: 600px;
+    padding: 16px;
+    margin: 0 auto 16px;
+    background-color: #aaffbb;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+    border-radius: 2px;
+    display: flex;
+    font-size: 14px;
+    font-weight: 300;
+}
+
+.noteSearch:focus {
+    outline: 0;
+}
